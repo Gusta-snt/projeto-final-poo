@@ -36,5 +36,6 @@ $ java Principal
 
 - [Gusta](https://github.com/Gusta-snt/)
 - [Thiago](https://github.com/ThiagoHF31)
+- [Higor](https://github.com/higorfs295)
 
 
