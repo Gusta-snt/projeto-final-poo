@@ -1,7 +1,5 @@
 <div align="center">
-    <a href="https://ibb.co/CbFtS7g">
-        <img height="200em" src="https://i.ibb.co/CbFtS7g/Super-trunfo.png" alt="Super-trunfo" border="0">
-    </a>
+    <img height="200em" src="https://svgshare.com/i/vHi.svg" alt="Super-trunfo" border="0">
 </div>
 
 <h3 align="center">🚧 Em criação! 🚧</h3>
