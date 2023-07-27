@@ -69,7 +69,6 @@ public class Baralho extends LinkedList<Carta>{
             }
             Carta carta = new Carta(nomeAtributos, valorAtributos, nomeCartas[i], codigo[i]);
             this.add(carta);
-            carta.mostraCarta();
         }
     }
 
@@ -81,7 +80,7 @@ public class Baralho extends LinkedList<Carta>{
         }
     }
 
-    public void distribuir(JogadorReal jogador1, JogadorRandômico jogador2) {
+    public void distribuir(JogadorAbstrato jogador1, JogadorAbstrato jogador2) {
         Iterator<Carta> iterator = this.iterator();
         Random random = new Random();
 
@@ -89,11 +88,11 @@ public class Baralho extends LinkedList<Carta>{
         jogadores[0] = jogador1;
         jogadores[1] = jogador2;
 
-        JogadorAbstrato toggleJogador = jogadores[random.nextInt((2 - 1) + 1) + 1];
+        JogadorAbstrato toggleJogador = jogadores[random.nextInt((1 - 0) + 1) + 0];
 
         while(iterator.hasNext()) {
 
-            //toggleJogador.monte.add(iterator.next());
+            toggleJogador.getMonte().add(iterator.next());
             iterator.remove();
             
             if(toggleJogador == jogador1) {
