@@ -1,17 +1,18 @@
+import java.util.List;
+
 public class JogadorRandômico extends JogadorAbstrato{
 
 
+    //sem modificações
     public JogadorRandômico(Baralho monte) {
-        super(monte);
+        super();
         
     }
 
-    
     @Override
-    public void jogarTurno() {
+    public Atributo escolherAtributo(List<Atributo> atributos) {
         // TODO Auto-generated method stub
-        
+        throw new UnsupportedOperationException("Unimplemented method 'escolherAtributo'");
     }
-    
     
 }
