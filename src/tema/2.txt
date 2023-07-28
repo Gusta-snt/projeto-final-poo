@@ -1,37 +1,36 @@
-Formiga-de-fogo
-Formiga-tanajura
-Aranha-marrom
-Aranha-armadeira
-Aranha-viola
-Aranha-lobo
-Aranha-teia-de-funil
-Aranha-caranguejeira
-Abelha-do-mel
-Vespa-cavalo-do-cão
-Abelha-azul
-Formiga-cabo-verde
-Escorpião-amarelo
-Escorpião-negro
-Escorpião-da-morte
-Aranha-saltadora
-Aranha-camelo
-Aranha-funil-de-seda
-Aranha-golias
-Aranha-das-trevas
-Aranha-marfim
-Abelha-carpinteira
-Vespa-gigante
-Abelha-europa
-Vespa-asiática
-Abelha-sul-africana
-Formiga-cabo-verde-de-cabeça-grande
-Formiga-pote-de-mel
-Escorpião-imperador
-Escorpião-veado
-Borboleta-monarca
-Lacraia
-Aranha-Golias
-
+Formiga-de-fogo Solenopsis_invicta Vermelha Habitat:Solo,_áreas_urbanas
+Formiga-tanajura (Atta spp.) - Cor: Preta e vermelha - Habitat: Florestas tropicais
+Aranha-marrom (Loxosceles spp.) - Cor: Marrom - Habitat: Locais escuros e úmidos
+Aranha-armadeira (Phoneutria spp.) - Cor: Marrom e amarela - Habitat: Vegetação, troncos de árvores
+Aranha-viola (Phoneutria fera) - Cor: Marrom e preta - Habitat: Vegetação, áreas úmidas
+Aranha-lobo (Lycosidae spp.) - Cor: Varia (comum em tons de marrom e cinza) - Habitat: Diversos ambientes
+Aranha-teia-de-funil (Atrax robustus) - Cor: Marrom e preta - Habitat: Buracos, locais escuros
+Aranha-caranguejeira (Theraphosidae spp.) - Cor: Marrom ou preta - Habitat: Solo, troncos de árvores
+Abelha-do-mel (Apis mellifera) - Cor: Amarela e preta - Habitat: Colmeias, áreas com flores
+Vespa-cavalo-do-cão (Vespula germanica) - Cor: Preta e amarela - Habitat: Diversos ambientes
+Abelha-azul (Euglossa spp.) - Cor: Azul metálico - Habitat: Áreas com flores, florestas
+Formiga-cabo-verde (Pheidole spp.) - Cor: Varia (geralmente marrom e preta) - Habitat: Solo, áreas urbanas
+Escorpião-amarelo (Tityus serrulatus) - Cor: Amarelo claro - Habitat: Locais escuros, úmidos e abrigados
+Escorpião-negro (Hottentotta spp.) - Cor: Preta - Habitat: Diversos ambientes
+Escorpião-da-morte (Centruroides spp.) - Cor: Marrom ou preta - Habitat: Vegetação, locais escuros
+Aranha-saltadora (Salticidae spp.) - Cor: Varia (muitas espécies são coloridas) - Habitat: Diversos ambientes
+Aranha-camelo (Barychelidae spp.) - Cor: Marrom - Habitat: Solo, áreas subterrâneas
+Aranha-funil-de-seda (Agelenidae spp.) - Cor: Varia (geralmente em tons de marrom) - Habitat: Vegetação, locais escondidos
+Aranha-golias (Theraphosa blondi) - Cor: Marrom e preta - Habitat: Solo, florestas tropicais
+Aranha-das-trevas (Atrax robustus) - Cor: Preta - Habitat: Áreas escuras, úmidas e subterrâneas
+Aranha-marfim (Aphonopelma spp.) - Cor: Marrom e preta - Habitat: Solo, áreas secas e quentes
+Abelha-carpinteira (Xylocopa spp.) - Cor: Preta ou azul metálico - Habitat: Áreas com madeira, florestas
+Vespa-gigante (Vespa mandarinia) - Cor: Preta e amarela - Habitat: Diversos ambientes
+Abelha-europa (Apis mellifera) - Cor: Amarela e preta - Habitat: Colmeias, áreas com flores
+Vespa-asiática (Vespa velutina) - Cor: Preta e amarela - Habitat: Diversos ambientes
+Abelha-sul-africana (Apis mellifera scutellata) - Cor: Amarela e preta - Habitat: Colmeias, áreas com flores
+Formiga-cabo-verde-de-cabeça-grande (Camponotus spp.) - Cor: Varia (muitas espécies são pretas ou marrons) - Habitat: Solo, áreas urbanas
+Formiga-pote-de-mel (Melipona spp.) - Cor: Preta e amarela - Habitat: Florestas tropicais, cavidades de árvores
+Escorpião-imperador (Pandinus imperator) - Cor: Preta - Habitat: Solo, locais abrigados
+Escorpião-veado (Tityus bahiensis) - Cor: Marrom - Habitat: Locais escuros e úmidos
+Borboleta-monarca (Danaus plexippus) - Cor: Laranja e preta - Habitat: Áreas com flores, migração em massa
+Lacraia (Scolopendra spp.) - Cor: Varia (muitas espécies são marrons ou pretas) - Habitat: Solo, áreas úmidas e escuras
+Aranha-Golias (Theraphosa blondi) - Cor: Marrom e preta - Habitat: Solo, florestas tropicais
 
 
 
