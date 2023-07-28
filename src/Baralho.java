@@ -13,9 +13,9 @@ public class Baralho extends LinkedList<Carta>{
             txt=("tema/1.txt");
         }if (tema.equals("heróis")){
             txt=("tema/2.txt");
-        }if (tema.equals("divindades")){
+        }if (tema.equals("insetos")){
             txt=("tema/3.txt");
-        }if (tema.equals("divindades")){
+        }if (tema.equals("mutantes")){
             txt=("tema/4.txt");
         }
     }
