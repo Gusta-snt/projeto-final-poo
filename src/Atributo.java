@@ -1,45 +1,41 @@
 public class Atributo {
-    //Atributos
     private String nome;
     private double valor;
-    private String unidade;
+    private String unidadeMedida;
 
-    //Construtor
-    public Atributo(String nome, double valor, String unidade) {
+    public Atributo(String nome, double valor, String unidadeMedida) {
+        if (nome == null || nome.isEmpty()) {
+            throw new IllegalArgumentException("O nome do atributo não pode ser nulo ou vazio.");
+        }
+
+        if (valor < 0) {
+            throw new IllegalArgumentException("O valor do atributo não pode ser negativo.");
+        }
+
         this.nome = nome;
         this.valor = valor;
-        this.unidade = unidade;
+        this.unidadeMedida = unidadeMedida;
     }
 
-
-    //Metodos:
-
-
-    
-    //getter e setters 
-
+    // Getters
     public String getNome() {
         return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public double getValor() {
         return valor;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    public String getUnidadeMedida() {
+        return unidadeMedida;
     }
 
-    public String getUnidade() {
-        return unidade;
+    @Override
+    public String toString() {
+        if (unidadeMedida == null || unidadeMedida.isEmpty()) {
+            return nome + ": " + valor;
+        } else {
+            return nome + ": " + valor + " " + unidadeMedida;
+        }
     }
-
-    public void setUnidade(String unidade) {
-        this.unidade = unidade;
-    }    
-    
 }

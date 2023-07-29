@@ -21,6 +21,32 @@ public class Carta {
     
     //Metodos:
 
+    public int compararAtributo(Carta outraCarta, Atributo atributo) {
+        double valorAtributoCartaAtual = 0;
+        double valorAtributoOutraCarta = 0;
+
+        for (Atributo a : atributos) {
+            if (a.getNome().equals(atributo.getNome())) {
+                valorAtributoCartaAtual = a.getValor();
+                break;
+            }
+        }
+
+        for (Atributo a : outraCarta.getAtributos()) {
+            if (a.getNome().equals(atributo.getNome())) {
+                valorAtributoOutraCarta = a.getValor();
+                break;
+            }
+        }
+
+        if (valorAtributoCartaAtual > valorAtributoOutraCarta) {
+            return 1;
+        } else if (valorAtributoCartaAtual < valorAtributoOutraCarta) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
 
 
 

@@ -1,5 +1,7 @@
 import java.util.LinkedList;
-import java.util.Arrays;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.Random;
@@ -11,91 +13,62 @@ public class Baralho extends LinkedList<Carta>{
         this.tema = tema;
     }
 
-
-    // temos que analisar a logica dessa classe
     public void carregar() {
-        String[] cartas = new String[32];
-        if(this.tema == "Ben 10") {
-            cartas = Arrays.asList(
-                "Heatblast",
-                "Four Arms",
-                "XLR8",
-                "Diamondhead",
-                "Upgrade",
-                "Ripjaws",
-                "Stinkfly",
-                "Ghostfreak",
-                "Grey Matter",
-                "Wildmutt",
-                "Cannonbolt",
-                "Wildvine",
-                "Upchuck",
-                "Ditto",
-                "Eye Guy",
-                "Way Big",
-                "Articguana",
-                "Buzzshock",
-                "Frankenstrike",
-                "Snare-oh",
-                "Blitzwolfer",
-                "Benwolf",
-                "Big Chill",
-                "Chromastone",
-                "Lodestar",
-                "Rath",
-                "Water Hazard",
-                "Terraspin",
-                "NRG",
-                "Fasttrack",
-                "Eatle",
-                "Feedback"
-            ).toArray(new String[0]);
-        }else{
-            if(this.tema == "Dinossauros") {
-                cartas = Arrays.asList(
-                    "Tyrannosaurus rex",
-                    "Velociraptor",
-                    "Triceratops",
-                    "Stegosaurus",
-                    "Brachiosaurus",
-                    "Ankylosaurus",
-                    "Spinosaurus",
-                    "Allosaurus",
-                    "Dilophosaurus",
-                    "Pterodactyl",
-                    "Utahraptor",
-                    "Apatosaurus",
-                    "Parasaurolophus",
-                    "Iguanodon",
-                    "Carnotaurus",
-                    "Archaeopteryx",
-                    "Deinonychus",
-                    "Gallimimus",
-                    "Compsognathus",
-                    "Pachycephalosaurus",
-                    "Baryonyx",
-                    "Diplodocus",
-                    "Allosaurus",
-                    "Brontosaurus",
-                    "Coelophysis",
-                    "Mosasaurus",
-                    "Microraptor",
-                    "Oviraptor",
-                    "Protoceratops",
-                    "Quetzalcoatlus",
-                    "Spinosaurus",
-                    "Troodon"
-                ).toArray(new String[0]);
-            }else{
-                System.out.println("Tema inválido!");
+        String arquivo = "./data/" + this.tema.replaceAll("\\s+", "").toLowerCase() + ".csv";
+        BufferedReader reader = null;
+        String linha = "";
+
+        String[] nomeAtributos = null;
+        String[] nomeCartas = null;
+        String[] codigo = null;
+        int[][] valorAtributosTabela = null;
+        try {
+            reader = new BufferedReader(new FileReader(arquivo));
+            String[][] tabela = new String[33][6];
+            int i = 0;
+            while((linha = reader.readLine()) != null) {
+                String[] palavrasLinha = linha.split(",");
+                int j = 0;
+                for(String palavra : palavrasLinha) {
+                    tabela[i][j] = palavra;
+                    j++;
+                }
+                i++;
             }
+
+            // Construindo alguns arrays com a tabela criada: 
+            nomeAtributos = new String[4];
+            for(i = 0; i < 4; i++) {
+                nomeAtributos[i] = tabela[0][i+1];
+            }
+            nomeCartas = new String[32];
+            codigo = new String[32];
+            valorAtributosTabela = new int[32][4];
+            for(i = 0; i < 32; i++) {
+                nomeCartas[i] = tabela[i+1][0];
+                codigo[i] = tabela[i+1][5];
+                for(int j = 0; j < 4; j++) {
+                    valorAtributosTabela[i][j] = Integer.parseInt(tabela[i+1][j+1]);
+                }
+            }
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            try{
+                reader.close();
+            }catch(IOException e) {
+                System.out.println("Não consigo fechar o leitor!");
+            }
+
         }
 
-        String[] letra = {"A", "B", "C", "D", "E", "F", "G", "H"};
-
-        for(int i = 0; i < cartas.length; i++) {
-            int grupo = ((int) i / 8) + 1;
-            this.add(new Carta(cartas[i], grupo + letra[grupo - 1]));
+        for(int i = 0; i < 32; i++) {
+            int[] valorAtributos = new int[4];
+            for(int j = 0; j < 4; j++) {
+                valorAtributos[j] = valorAtributosTabela[i][j];
+            }
+            Carta carta = new Carta(nomeCartas[i], codigo[i], null, null, false);
+            this.add(carta);
         }
     }
 
@@ -107,7 +80,7 @@ public class Baralho extends LinkedList<Carta>{
         }
     }
 
-    public void distribuir(JogadorReal jogador1, JogadorRandômico jogador2) {
+    public void distribuir(JogadorAbstrato jogador1, JogadorAbstrato jogador2) {
         Iterator<Carta> iterator = this.iterator();
         Random random = new Random();
 
@@ -115,7 +88,7 @@ public class Baralho extends LinkedList<Carta>{
         jogadores[0] = jogador1;
         jogadores[1] = jogador2;
 
-        JogadorAbstrato toggleJogador = jogadores[random.nextInt((2 - 1) + 1) + 1];
+        JogadorAbstrato toggleJogador = jogadores[random.nextInt((1 - 0) + 1) + 0];
 
         while(iterator.hasNext()) {
 
