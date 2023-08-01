@@ -15,7 +15,7 @@ public abstract class JogadorAbstrato {
     }
 
   
-    public abstract String howAtrib(Carta carta);
+    public abstract String wichAtrib(Carta carta);
 
   
     public String jogada() {
