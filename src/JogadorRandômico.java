@@ -1,14 +1,14 @@
+import java.util.Random;
 
 public class JogadorRandômico extends JogadorAbstrato{
 
-    public JogadorRandômico(String nick, Baralho baralho) {
-        super(nick);
-        super(baralho);
-    }
-
-    @Override
-    public String toString() {
-        return "JogadorRandômico []";
+    private Random random;
+    private String selected=("");
+    
+    public JogadorRandômico(String nick, Baralho baralho, String selected) {
+        super(nick, baralho);
+       	random = new Random();
+        this.selected=selected;
     }
 
     @Override
@@ -33,6 +33,47 @@ public class JogadorRandômico extends JogadorAbstrato{
     public void setNick(String nick) {
         // TODO Auto-generated method stub
         super.setNick(nick);
+    }
+
+    @Override
+    public String howAtrib(Carta carta) {
+        // TODO Auto-generated method stub
+        
+        random.nextInt(4);
+        if(random.equals(1)){
+            selected=("A");
+        }
+        if(random.equals(2)){
+            selected=("B");        
+        }
+        if(random.equals(3)){
+            selected=("C");        
+        }
+        if(random.equals(4)){
+            selected=("D");
+        }
+    return selected;
+    }
+
+    public Random getRandom() {
+        return random;
+    }
+
+    public void setRandom(Random random) {
+        this.random = random;
+    }
+
+    public String getSelected() {
+        return selected;
+    }
+
+    public void setSelected(String selected) {
+        this.selected = selected;
+    }
+
+    @Override
+    public String toString() {
+        return "JogadorRandômico [random=" + random + ", selected=" + selected + "]";
     }
     
 }
