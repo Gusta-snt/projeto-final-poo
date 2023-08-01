@@ -31,7 +31,7 @@ public class JogadorReal extends JogadorAbstrato{
         super.setNick(nick);
     }
 
-    public String howAtrib(Carta carta) {
+    public String wichAtrib(Carta carta) {
         System.out.println("Sua carta: \n" + carta.toString());
         System.out.print("Escolha um atributo para jogar: \n Digite A para escolher o primeiro atributo\n B para escolher o segundo\n C para o terceiro \n D para escolher o quarto");
         
