@@ -36,7 +36,7 @@ public class JogadorRandômico extends JogadorAbstrato{
     }
 
     @Override
-    public String howAtrib(Carta carta) {
+    public String wichAtrib(Carta carta) {
         // TODO Auto-generated method stub
         
         random.nextInt(4);
