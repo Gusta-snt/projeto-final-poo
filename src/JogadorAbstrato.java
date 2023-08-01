@@ -1,8 +1,6 @@
 public abstract class JogadorAbstrato {
     protected String nick;
     protected Baralho baralho;
-
-    // Construtor
     public JogadorAbstrato(String nick, Baralho baralho) {
         this.nick = nick;
         this.baralho = baralho;
