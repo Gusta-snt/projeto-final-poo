@@ -18,6 +18,7 @@ public class Baralho extends LinkedList<Carta>{
         }if (tema.equals("mutantes")){
             txt=("tema/4.txt");
         }
+        carregar();
     }
 
     public void carregar(){
@@ -57,5 +58,12 @@ public class Baralho extends LinkedList<Carta>{
 
     }
     
+    public void embaralhar() {
+    
+    }
+    
+    public List<Carta> distribuir(int quantidade) {
+    
+    }
 
 }

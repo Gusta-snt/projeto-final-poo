@@ -70,6 +70,22 @@ public class Jogo {
 
         
     }
+    
+        public void jogar() {
+        while (!JogadorReal.baralho.isEmpty() && !JogadorRandomico.baralho.isEmpty()) {
+            System.out.println("ROUND");
+            Carta cartaJogador = JogadorReal.jogarTurno();
+            Carta cartaRandomico = JogadorRandomico.jogarTurno();
+            
+            System.out.println("\nSelecione um atributo: ");
+            
+            System.out.println("\nStatus:");
+            System.out.println("Jogador: " + jogadorReal.baralho.size() + " cartas");
+            System.out.println("Computador: " + jogadorRandomico.baralho.size() + " cartas");
+            System.out.println("----------------------------\n");
+        }
+        System.out.println(" O vencedor é o Jogador: " );
+    }
 
     public static Object getTema() {
         return tema;
