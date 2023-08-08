@@ -30,7 +30,7 @@ public class Baralho extends LinkedList<Carta>{
         BufferedReader reader = null;
         String linha = "";
 
-        String[] nomeAtributos = null;
+        String[][] nomeAtributos = null;
         String[] nomeCartas = null;
         String[] codigo = null;
         String[] descricao = null;
@@ -54,9 +54,9 @@ public class Baralho extends LinkedList<Carta>{
             }
 
             // Construindo alguns arrays com a tabela criada: 
-            nomeAtributos = new String[4];
+            nomeAtributos = new String[4][2];
             for(i = 0; i < 4; i++) {
-                nomeAtributos[i] = tabela[0][i+1];
+                nomeAtributos[i] = tabela[0][i+1].split("-");
                 //System.out.println(nomeAtributos[i]);
             }
             nomeCartas = new String[32];
@@ -114,7 +114,7 @@ public class Baralho extends LinkedList<Carta>{
 
         while(iterator.hasNext()) {
 
-            toggleJogador.getMonte().add(iterator.next());
+            //toggleJogador.getMonte().add(iterator.next());
             iterator.remove();
             
             if(toggleJogador == jogador1) {

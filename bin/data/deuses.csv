@@ -1,4 +1,4 @@
-Nome do Personagem;Força;Agilidade;Inteligência;Defesa;Código;super-trunfo;Descrição
+Nome do Personagem;Força-N;Agilidade-m/s;Inteligência-QI;Defesa-OHM;Código;super-trunfo;Descrição
 Zeus (SUPER TRUNFO);100;90;95;95;1A;true;Rei dos deuses na mitologia grega, governante do Monte Olimpo e controlador dos raios e trovões.
 Thor;95;95;80;90;1B;false;Deus do trovão e protetor de Asgard na mitologia nórdica, conhecido por empunhar o martelo Mjölnir.
 Amaterasu;90;85;95;90;1C;false;Deusa do sol no xintoísmo japonês, responsável por trazer luz e calor ao mundo.

@@ -1,4 +1,4 @@
-Nome do Personagem;Força;Agilidade;Inteligência;Defesa;Código;super-trunfo;Descrição
+Nome do Personagem;Força-N;Agilidade-m/s;Inteligência-QI;Defesa-OHM;Código;super-trunfo;Descrição
 Chama;80;60;40;70;1A;false;Um alien flamejante capaz de lançar rajadas de fogo poderosas.
 Besta;90;50;30;80;1B;false;Uma criatura feroz com força sobre-humana e a capacidade de se transformar em animais.
 Quatro Braços;95;40;20;90;1C;false;Um alien colossal com quatro braços musculosos e uma incrível resistência.
