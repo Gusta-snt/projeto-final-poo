@@ -79,5 +79,12 @@ public class JogadorRandômico extends JogadorAbstrato{
 	public static Carta jogarTurno() {
 		return null;
 	}
+        public String jogada() {
+        StringBuilder tento = new StringBuilder();
+        for (Carta carta : baralho) {
+            tento.append(carta.toString()).append("\n");
+        }
+        return tento.toString();
+    }
     
 }

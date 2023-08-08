@@ -36,7 +36,7 @@ public class JogadorReal extends JogadorAbstrato{
         System.out.print("Escolha um atributo para jogar: \n Digite A para escolher o primeiro atributo\n B para escolher o segundo\n C para o terceiro \n D para escolher o quarto");
         
         String selected = ler.nextLine();
-        return selected;
+        return selected; 
     }
 
 

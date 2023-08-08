@@ -1,6 +1,6 @@
 public abstract class JogadorAbstrato {
     protected String nick;
-    protected static static Baralho baralho;
+    protected static Baralho baralho;
     public JogadorAbstrato(String nick) {
         this.nick = nick;
     }
@@ -22,13 +22,13 @@ public abstract class JogadorAbstrato {
     public abstract String wichAtrib(Carta carta);
 
   
-    public String jogada() {
+  /*  public String jogada() {
         StringBuilder tento = new StringBuilder();
         for (Carta carta : baralho) {
             tento.append(carta.toString()).append("\n");
         }
         return tento.toString();
-    }
+    }*/
 
     public String getNick() {
         return nick;
