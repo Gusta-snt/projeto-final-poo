@@ -1,33 +1,34 @@
-Nome do Personagem,Força,Agilidade,Inteligência,Defesa,Código
-Monkey D. Luffy (SUPER TRUNFO),95,85,70,80,1A
-Roronoa Zoro,90,75,60,85,1B
-Vinsmoke Sanji,85,90,65,75,1C
-Nami,30,95,80,40,1D
-Usopp,40,80,85,50,2A
-Tony Tony Chopper,60,70,75,65,2B
-Nico Robin,70,60,90,50,2C
-Franky,80,50,65,90,2D
-Brook,75,80,70,55,3A
-Jinbe,90,75,70,95,3B
-Portgas D. Ace,95,85,75,70,3C
-Sabo,90,90,80,65,3D
-Boa Hancock,80,90,75,60,4A
-Trafalgar D. Water Law,85,90,95,70,4B
-Buggy,50,70,55,50,4C
-Dracule Mihawk,100,95,85,90,4D
-Smoker,80,80,70,85,5A
-Kuzan (Aokiji),95,90,85,75,5B
-Rob Lucci,90,85,75,80,5C
-Magellan,80,70,90,65,5D
-Donquixote Doflamingo,95,85,80,75,6A
-Sir Crocodile,90,80,75,85,6B
-Nico Olvia,70,75,95,50,6C
-Kaido,100,95,80,95,6D
-Big Mom (Charlotte Linlin),95,80,75,100,7A
-Shanks,95,95,90,90,7B
-Blackbeard (Marshall D. Teach),100,85,85,95,7C
-Gol D. Roger,100,100,100,100,7D
-Kizaru (Borsalino),95,95,90,80,8A
-Marco,90,80,70,85,8B
-Nefertari Vivi,40,75,80,45,8C
-Boa Sandersonia,80,85,70,70,8D
+Nome do Personagem,Força,Agilidade,Inteligência,Defesa,Código,super-trunfo,Descrição
+Monkey D. Luffy,95,85,70,80,1A,false,Um pirata de chapéu de palha com habilidades de borracha graças à Fruta do Diabo Gomu Gomu.
+Roronoa Zoro,90,75,60,85,1B,false,Um espadachim habilidoso que busca se tornar o maior espadachim do mundo.
+Vinsmoke Sanji,85,90,65,75,1C,false,Um mestre em artes marciais que luta com os pés e possui grande paixão pela culinária.
+Nami,30,95,80,40,1D,false,Uma navegadora talentosa com habilidades em criar e manipular o clima.
+Usopp,40,80,85,50,2A,false,Um atirador habilidoso e inventor, conhecido por suas histórias exageradas.
+Tony Tony Chopper,60,70,75,65,2B,false,Uma rena que comeu a Fruta do Diabo Hito Hito no Mi e se tornou uma rena humana com habilidades médicas.
+Nico Robin,70,60,90,50,2C,false,Conhecida como "Filha dos Demônios", tem a habilidade de criar partes do corpo em qualquer superfície.
+Franky,80,50,65,90,2D,false,Um ciborgue que pode se transformar e disparar ataques poderosos.
+Brook,75,80,70,55,3A,false,Um esqueleto músico com habilidades de esgrima e a capacidade de se tornar intangível.
+Jinbe,90,75,70,95,3B,false,Um homem-peixe com habilidades de luta aquática e maestria em karatê marinho.
+Portgas D. Ace,95,85,75,70,3C,false,Filho de Gol D. Roger e irmão mais velho de Luffy, tem poderes relacionados ao fogo.
+Sabo,90,90,80,65,3D,false,Outro irmão de Luffy e Ace, possui poderes de fogo semelhantes ao de Ace.
+Boa Hancock,80,90,75,60,4A,false,A bela capitã dos Piratas Kuja, tem poderes de petrificação graças à Fruta do Diabo Mero Mero.
+Trafalgar D. Water Law,85,90,95,70,4B,false,Um pirata com poderes da Fruta do Diabo Ope Ope, permitindo manipulação de objetos e pessoas.
+Buggy,50,70,55,50,4C,false,Um pirata com poderes da Fruta Bara Bara, permitindo dividir o corpo em partes.
+Dracule Mihawk,100,95,85,90,4D,false,Um dos maiores espadachins do mundo, conhecido como "Hawk-Eye".
+Smoker,80,80,70,85,5A,false,Um capitão da Marinha com habilidades de fumaça graças à Fruta do Diabo Moku Moku.
+Kuzan (Aokiji),95,90,85,75,5B,false,Um almirante da Marinha com poderes de gelo graças à Fruta do Diabo Hie Hie.
+Rob Lucci,90,85,75,80,5C,false,Um agente do CP9 com poderes da Fruta do Diabo Neko Neko: modelo leopardo.
+Magellan,80,70,90,65,5D,false,O chefe da prisão de Impel Down com poderes da Fruta do Diabo Doku Doku.
+Donquixote Doflamingo,95,85,80,75,6A,false,Um Shichibukai com poderes da Fruta do Diabo Ito Ito, permitindo controlar pessoas como marionetes.
+Sir Crocodile,90,80,75,85,6B,false,Outro Shichibukai, com poderes da Fruta do Diabo Suna Suna, permitindo transformar em areia.
+Nico Olvia,70,75,95,50,6C,false,Arqueóloga e mãe de Nico Robin, com grande conhecimento sobre o século perdido.
+Kaido,100,95,80,95,6D,false,Conhecido como "Kaido, o Rei das Feras", um dos quatro imperadores do Novo Mundo.
+Big Mom (Charlotte Linlin),95,80,75,100,7A,false,Outra imperadora do Novo Mundo, com poderes da Fruta do Diabo Soru Soru.
+Shanks,95,95,90,90,7B,false,Um dos quatro imperadores e ex-membro dos Piratas do Chapéu de Palha.
+Blackbeard (Marshall D. Teach),100,85,85,95,7C,false,Outro dos quatro imperadores, com poderes das Frutas do Diabo Yami Yami e Gura Gura.
+Gol D. Roger,100,100,100,100,7D,true,Conhecido como o "Rei dos Piratas", foi o único a alcançar a Grande Linha e encontrar o One Piece.
+Kizaru (Borsalino),95,95,90,80,8A,false,Um almirante da Marinha com poderes da Fruta do Diabo Pika Pika.
+Marco,90,80,70,85,8B,false,Conhecido como "Marco, o Fênix", um pirata com poderes da Fruta do Diabo Tori Tori: modelo fênix.
+Nefertari Vivi,40,75,80,45,8C,false,A princesa de Alabasta que viajou com os Chapéus de Palha durante o arco de Alabasta.
+Boa Sandersonia,80,85,70,70,8D,false,Uma das irmãs Gorgon, com poderes da Fruta do Diabo Hebi Hebi: modelo cobra real.
+
