@@ -1,16 +1,20 @@
-public class Carta {
+public class Carta<T extends Number>{
 
-  private Atributo[] atributos = new Atributo[4];
+  private Atributo<T>[] atributos;
   private String nome;
   private String codigo;
-  private String isSuperTrunfo;
+  private boolean isSuperTrunfo;
   private String descricao;
 
-  public Carta(String[][] nomeUnidadeAtributos, int[] valorAtributos, String nome, String codigo, boolean isSuperTrunfo, String descricao) {
+  public Carta(String[][] nomeUnidadeAtributos, T[] valorAtributos, String nome, String codigo, boolean isSuperTrunfo, String descricao) {
     this.nome = nome;
+    this.codigo = codigo;
+    this.isSuperTrunfo = isSuperTrunfo;
+    this.descricao = descricao;
+    atributos = new Atributo[4];
 
     for(int i = 0; i < 4; i++) {
-      atributos[i] = new Atributo(nomeUnidadeAtributos[i][0], valorAtributos[i], nomeUnidadeAtributos[i][1]);
+      atributos[i] = new Atributo<>(nomeUnidadeAtributos[i][0], valorAtributos[i], nomeUnidadeAtributos[i][1]);
     }
   }
 
@@ -22,11 +26,11 @@ public class Carta {
     this.nome = nome;
   }
 
-  public Atributo[] getAtributos() {
+  public Atributo<T>[] getAtributos() {
     return atributos;
   }
 
-  public void setAtributos(Atributo[] atributos) {
+  public void setAtributos(Atributo<T>[] atributos) {
     this.atributos = atributos;
   }
 
@@ -38,11 +42,11 @@ public class Carta {
     this.codigo = codigo;
   }
 
-  public String getIsSuperTrunfo() {
+  public boolean getIsSuperTrunfo() {
     return isSuperTrunfo;
   }
 
-  public void setIsSuperTrunfo(String isSuperTrunfo) {
+  public void setIsSuperTrunfo(boolean isSuperTrunfo) {
     this.isSuperTrunfo = isSuperTrunfo;
   }
 
@@ -56,7 +60,7 @@ public class Carta {
 
   @Override
   public String toString() {
-    return "Carta [atributos=" + atributos.toString() + ", nome=" + nome + ", codigo=" + codigo
+    return "Carta [atributos=[" + atributos[0].toString() + ", " + atributos[1].toString() + ", " + atributos[2].toString() + ", " + atributos[3].toString() + "], nome=" + nome + ", codigo=" + codigo
         + ", isSuperTrunfo=" + isSuperTrunfo + ", descricao=" + descricao + "]";
   }
 }
