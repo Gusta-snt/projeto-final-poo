@@ -1,6 +1,10 @@
 public abstract class JogadorAbstrato {
     protected String nick;
-    protected Baralho baralho;
+    protected static static Baralho baralho;
+    public JogadorAbstrato(String nick) {
+        this.nick = nick;
+    }
+
     public JogadorAbstrato(String nick, Baralho baralho) {
         this.nick = nick;
         this.baralho = baralho;

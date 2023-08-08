@@ -1,8 +1,14 @@
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 
 public class Principal extends JFrame{
-    public JanelaPrincipal() {
+    public Principal() {
 
         setTitle("Jogo Super Trunfo");
         setSize(800, 600);
@@ -26,6 +32,9 @@ public class Principal extends JFrame{
 
         add(painelPrincipal);
     }
+    private Object iniciarJogo() {
+        return null;
+    }
     public static void main(String[] args) {
         
             	SwingUtilities.invokeLater(() -> {
@@ -35,5 +44,9 @@ public class Principal extends JFrame{
         
         Jogo jogo = new Jogo();
         jogo.jogar();
+    }
+    @Override
+    public String toString() {
+        return "Principal []";
     }
 }

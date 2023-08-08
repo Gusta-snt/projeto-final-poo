@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Baralho extends LinkedList<Carta>{
     String txt;
@@ -63,6 +64,7 @@ public class Baralho extends LinkedList<Carta>{
     }
     
     public List<Carta> distribuir(int quantidade) {
+        return null;
     
     }
 

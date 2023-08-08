@@ -75,5 +75,9 @@ public class JogadorRandômico extends JogadorAbstrato{
     public String toString() {
         return "JogadorRandômico [random=" + random + ", selected=" + selected + "]";
     }
+
+	public static Carta jogarTurno() {
+		return null;
+	}
     
 }

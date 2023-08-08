@@ -46,7 +46,7 @@ public class Jogo {
             System.out.println("Escolha o seu nickname:");
             nick = leitor.nextLine();
             JogadorReal Jogador1 = new JogadorReal(nick, null);
-            JogadorRandômico Jogador2 = new JogadorRandômico("skynet", null);
+            JogadorRandômico Jogador2 = new JogadorRandômico("skynet", null, selecao);
         }
 
 //----------------------------------------------------------------------------------//
@@ -72,16 +72,16 @@ public class Jogo {
     }
     
         public void jogar() {
-        while (!JogadorReal.baralho.isEmpty() && !JogadorRandomico.baralho.isEmpty()) {
+        while (!JogadorReal.baralho.isEmpty() && !JogadorRandômico.baralho.isEmpty()) {
             System.out.println("ROUND");
             Carta cartaJogador = JogadorReal.jogarTurno();
-            Carta cartaRandomico = JogadorRandomico.jogarTurno();
+            Carta cartaRandomico = JogadorRandômico.jogarTurno();
             
             System.out.println("\nSelecione um atributo: ");
             
             System.out.println("\nStatus:");
-            System.out.println("Jogador: " + jogadorReal.baralho.size() + " cartas");
-            System.out.println("Computador: " + jogadorRandomico.baralho.size() + " cartas");
+            System.out.println("Jogador: " + JogadorReal.baralho.size() + " cartas");
+            System.out.println("Computador: " + JogadorAbstrato.baralho.size() + " cartas");
             System.out.println("----------------------------\n");
         }
         System.out.println(" O vencedor é o Jogador: " );

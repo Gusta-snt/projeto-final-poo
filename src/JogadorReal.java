@@ -52,5 +52,9 @@ public class JogadorReal extends JogadorAbstrato{
     public String toString() {
         return "JogadorReal [ler=" + ler + "]";
     }
+
+    public static Carta jogarTurno() {
+        return null;
+    }
     
 }
