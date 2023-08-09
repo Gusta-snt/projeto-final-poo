@@ -1,17 +1,13 @@
-import java.util.LinkedList;
-
 public class Carta {
-    //Atributos
+    // Atributos
     private String nome;
     private String codigo;
-    private LinkedList<String> curiosidade;
-    private LinkedList<Atributo> atributos;
+    private String curiosidade;
+    private Atributo[] atributos; // Correção: Declarar como array de Atributo
     private boolean superTrunfo;
 
-    //Contrutor de Carta
-    public Carta(String nome, String codigo, LinkedList<String> curiosidade, 
-        LinkedList<Atributo> atributos, boolean superTrunfo) {
-
+    // Construtor de Carta
+    public Carta(String nome, String codigo, String curiosidade, Atributo[] atributos, boolean superTrunfo) {
         this.nome = nome;
         this.codigo = codigo;
         this.curiosidade = curiosidade;
@@ -19,8 +15,7 @@ public class Carta {
         this.superTrunfo = superTrunfo;
     }
     
-    //Metodos:
-
+    // Métodos:
     public int compararAtributo(Carta outraCarta, Atributo atributo) {
         double valorAtributoCartaAtual = 0;
         double valorAtributoOutraCarta = 0;
@@ -48,9 +43,20 @@ public class Carta {
         }
     }
 
+    // Na classe Carta
+@Override
+    public String toString() {
+        StringBuilder attributesString = new StringBuilder();
+        for (Atributo atributo : atributos) {
+            attributesString.append(atributo.getNome()).append(": ").append(atributo.getValor()).append(", ");
+        }
+        attributesString.setLength(attributesString.length() - 2); // Remove a última vírgula e espaço
+
+        return "Carta: " + nome + '\'' +"\natributo: " + attributesString.toString();
+}
 
 
-    //getter e setter da classe
+    // Getter e setter da classe
     public String getNome() {
         return nome;
     }
@@ -67,20 +73,12 @@ public class Carta {
         this.codigo = codigo;
     }
 
-    public LinkedList<String> getCuriosidade() {
-        return curiosidade;
+    public String getCuriosidade() {
+        return curiosidade; 
     }
 
-    public void setCuriosidade(LinkedList<String> curiosidade) {
+    public void setCuriosidade(String curiosidade) { 
         this.curiosidade = curiosidade;
-    }
-
-    public LinkedList<Atributo> getAtributos() {
-        return atributos;
-    }
-
-    public void setAtributos(LinkedList<Atributo> atributos) {
-        this.atributos = atributos;
     }
 
     public boolean isSuperTrunfo() {
@@ -89,5 +87,13 @@ public class Carta {
 
     public void setSuperTrunfo(boolean superTrunfo) {
         this.superTrunfo = superTrunfo;
+    }
+
+    public Atributo[] getAtributos() {
+        return atributos;
+    }
+
+    public void setAtributos(Atributo[] atributos) {
+        this.atributos = atributos;
     }
 }

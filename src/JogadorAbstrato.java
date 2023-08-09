@@ -1,15 +1,12 @@
 import java.util.LinkedList;
 import java.util.List;
-
-
-
 abstract class JogadorAbstrato {
     private LinkedList<Carta> monte;
     private String nome;
 
     //Aqui o constructor so inicia uma lista que vai ser o monte de cartas
     public JogadorAbstrato() {
-        monte = new LinkedList<>(null);
+        monte = new LinkedList<>();
     }
 
 
@@ -34,7 +31,7 @@ abstract class JogadorAbstrato {
         return null;
     }
 
-    public abstract Atributo escolherAtributo(List<Atributo> atributos);
+    public abstract Atributo escolherAtributo(LinkedList<Atributo> atributos);
 
     public LinkedList<Carta> getMonte() {
         return monte;
