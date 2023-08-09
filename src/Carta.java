@@ -1,10 +1,10 @@
 public class Carta {
     // Atributos
-    private String nome;
-    private String codigo;
-    private String curiosidade;
-    private Atributo[] atributos; // Correção: Declarar como array de Atributo
-    private boolean superTrunfo;
+    private String nome;             // Nome da carta
+    private String codigo;           // Código identificador da carta
+    private String curiosidade;      // Curiosidade sobre a carta
+    private Atributo[] atributos;    // Array de atributos da carta
+    private boolean superTrunfo;     // Indica se a carta é um Super Trunfo
 
     // Construtor de Carta
     public Carta(String nome, String codigo, String curiosidade, Atributo[] atributos, boolean superTrunfo) {
@@ -14,12 +14,13 @@ public class Carta {
         this.atributos = atributos;
         this.superTrunfo = superTrunfo;
     }
-    
-    // Métodos:
+
+    // Método para comparar um atributo entre duas cartas
     public int compararAtributo(Carta outraCarta, Atributo atributo) {
         double valorAtributoCartaAtual = 0;
         double valorAtributoOutraCarta = 0;
 
+        // Encontra o valor do atributo da carta atual
         for (Atributo a : atributos) {
             if (a.getNome().equals(atributo.getNome())) {
                 valorAtributoCartaAtual = a.getValor();
@@ -27,6 +28,7 @@ public class Carta {
             }
         }
 
+        // Encontra o valor do atributo da outra carta
         for (Atributo a : outraCarta.getAtributos()) {
             if (a.getNome().equals(atributo.getNome())) {
                 valorAtributoOutraCarta = a.getValor();
@@ -34,17 +36,18 @@ public class Carta {
             }
         }
 
+        // Compara os valores dos atributos e retorna o resultado da comparação
         if (valorAtributoCartaAtual > valorAtributoOutraCarta) {
-            return 1;
+            return 1;    // A carta atual vence
         } else if (valorAtributoCartaAtual < valorAtributoOutraCarta) {
-            return -1;
+            return -1;   // A outra carta vence
         } else {
-            return 0;
+            return 0;    // Empate
         }
     }
 
-    // Na classe Carta
-@Override
+    // Método toString para exibir informações da carta
+    @Override
     public String toString() {
         StringBuilder attributesString = new StringBuilder();
         for (Atributo atributo : atributos) {
@@ -53,10 +56,9 @@ public class Carta {
         attributesString.setLength(attributesString.length() - 2); // Remove a última vírgula e espaço
 
         return "Carta: " + nome + '\'' +"\natributo: " + attributesString.toString();
-}
+    }
 
-
-    // Getter e setter da classe
+    // Getters e setters da classe
     public String getNome() {
         return nome;
     }
