@@ -9,18 +9,6 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Baralho extends LinkedList<Carta>{
     private String tema;
 
-    public String getTema() {
-        return tema;
-    }
-
-    public void setTema(String tema) {
-        this.tema = tema;
-    }
-
-    public void adicionarCarta(Carta carta) {
-        this.add(carta);
-    }
-
     public Baralho(String tema) {
         this.tema = tema;
     }
@@ -104,6 +92,7 @@ public class Baralho extends LinkedList<Carta>{
     }
 
     public void distribuir(JogadorAbstrato jogador1, JogadorAbstrato jogador2) {
+        this.getQtdCartas();
         Iterator<Carta> iterator = this.iterator();
 
         JogadorAbstrato[] jogadores = new JogadorAbstrato[2];
@@ -114,7 +103,7 @@ public class Baralho extends LinkedList<Carta>{
 
         while(iterator.hasNext()) {
 
-            //toggleJogador.getMonte().add(iterator.next());
+            toggleJogador.getMonte().add(iterator.next());
             iterator.remove();
             
             if(toggleJogador == jogador1) {
@@ -124,4 +113,33 @@ public class Baralho extends LinkedList<Carta>{
             }
         }
     }
+
+    public void mostraCartas() {
+        Iterator<Carta> iterator = this.iterator();
+
+        while(iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+
+    public int getQtdCartas() {
+        return this.size();
+    }
+
+    public Carta getCartaTopo() {
+        return this.removeFirst();
+    }
+
+    public void adicionarCarta(Carta carta) {
+        this.addFirst(carta);
+    }
+
+    public String getTema() {
+        return tema;
+    }
+
+    public void setTema(String tema) {
+        this.tema = tema;
+    }
+
 }
