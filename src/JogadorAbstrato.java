@@ -30,7 +30,7 @@
         }
         return tento.toString();
     }*/
-=======
+//=======
   //  public String jogada() {
    //     StringBuilder tento = new StringBuilder();
      //   for (Carta carta : baralho) {
@@ -38,8 +38,8 @@
         //}
         //return tento.toString();
     //}
->>>>>>> da8c19f (testando primeiro protótipo integrado)
-
+//>>>>>>> da8c19f (testando primeiro protótipo integrado)
+/* 
     public String getNick() {
         return nick;
     }
@@ -77,4 +77,5 @@ public abstract class JogadorAbstrato {
     public abstract int getQuantidadeCartas();
     public abstract Carta getCartaSuperior();
     public abstract boolean monteVazio();
+
 }

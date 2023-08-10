@@ -6,15 +6,15 @@ public class Carta<T extends Number>{
   private boolean isSuperTrunfo;
   private String descricao;
 
-  public Carta(String[][] nomeUnidadeAtributos, T[] valorAtributos, String nome, String codigo, boolean isSuperTrunfo, String descricao) {
+  public Carta(String[][] nomeUnidadeAtributos, String[] valorAtributos, String nome, String codigo, boolean isSuperTrunfo, String descricao) {
     this.nome = nome;
     this.codigo = codigo;
     this.isSuperTrunfo = isSuperTrunfo;
     this.descricao = descricao;
-    atributos = new Atributo[4];
+   // atributos = new Atributo[4];
 
     for(int i = 0; i < 4; i++) {
-      atributos[i] = new Atributo<>(nomeUnidadeAtributos[i][0], valorAtributos[i], nomeUnidadeAtributos[i][1]);
+      atributos[i] = new Atributo(nomeUnidadeAtributos[i][0], valorAtributos[i], nomeUnidadeAtributos[i][1]);
     }
   }
 

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+/*<<<<<<< HEAD
 
 
 public class Principal{
@@ -19,7 +19,7 @@ public class Principal{
     @Override
     public String toString() {
         return "Principal []";
-=======
+=======*/
 import java.util.Scanner;
 
 public class Principal {
@@ -33,7 +33,7 @@ public class Principal {
         Jogo jogo = new Jogo(tema);
         jogo.jogar();
         scanner.close();
->>>>>>> da8c19f (testando primeiro protótipo integrado)
+//>>>>>>> da8c19f (testando primeiro protótipo integrado)
     }
 }
  
