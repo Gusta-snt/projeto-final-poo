@@ -1,12 +1,19 @@
-public class Carta<T extends Number>{
+public class Carta{
 
-    private Atributo<T>[] atributos;
+    private Atributo<Number>[] atributos;
     private String nome;
     private String codigo;
     private boolean isSuperTrunfo;
     private String descricao;
   
-    public Carta(String[][] nomeUnidadeAtributos, T[] valorAtributos, String nome, String codigo, boolean isSuperTrunfo, String descricao) {
+    public Carta(
+        String[][] nomeUnidadeAtributos, 
+        String[] valorAtributos, 
+        String nome, 
+        String codigo, 
+        boolean isSuperTrunfo, 
+        String descricao
+    ) {
       this.nome = nome;
       this.codigo = codigo;
       this.isSuperTrunfo = isSuperTrunfo;
@@ -14,7 +21,7 @@ public class Carta<T extends Number>{
       atributos = new Atributo[4];
   
       for(int i = 0; i < 4; i++) {
-        atributos[i] = new Atributo<>(nomeUnidadeAtributos[i][0], valorAtributos[i], nomeUnidadeAtributos[i][1]);
+        atributos[i] = new Atributo<Number>(nomeUnidadeAtributos[i][0], valorAtributos[i], nomeUnidadeAtributos[i][1]);
       }
     }
   
@@ -26,11 +33,11 @@ public class Carta<T extends Number>{
       this.nome = nome;
     }
   
-    public Atributo<T>[] getAtributos() {
+    public Atributo<Number>[] getAtributos() {
       return atributos;
     }
   
-    public void setAtributos(Atributo<T>[] atributos) {
+    public void setAtributos(Atributo<Number>[] atributos) {
       this.atributos = atributos;
     }
   
