@@ -1,45 +1,66 @@
-public class Carta {
-    private Atributo[] atributos = new Atributo[4];
-    private Boolean isSuperTrunfo;
-    private String descricao;
+public class Carta<T extends Number>{
+
+    private Atributo<T>[] atributos;
     private String nome;
     private String codigo;
-
-    public Carta(String[] nomeAtributos, String[] valorAtributos, String nome, String codigo, Boolean isSuperTrunfo, String descricao) {
-        this.nome = nome;
-        this.codigo = codigo;
-        this.isSuperTrunfo = isSuperTrunfo;
-        this.descricao = descricao;
-        for(int i = 0; i < atributos.length; i++) {
-            atributos[i] = new Atributo(nomeAtributos[i], valorAtributos[i]);
-        }
-    }
-
-    public String toString() {
-        return this.nome + " " + this.atributos[0].getNome() + ":" + this.atributos[0].getValor() + " " + this.atributos[1].getNome() + ":" + this.atributos[1].getValor() + " " + this.atributos[2].getNome() + ":" + this.atributos[2].getValor() + " " + this.atributos[3].getNome() + ":" + this.atributos[3].getValor() +  " # " + this.codigo + " = " + this.isSuperTrunfo + " - " + this.descricao;
+    private boolean isSuperTrunfo;
+    private String descricao;
+  
+    public Carta(String[][] nomeUnidadeAtributos, T[] valorAtributos, String nome, String codigo, boolean isSuperTrunfo, String descricao) {
+      this.nome = nome;
+      this.codigo = codigo;
+      this.isSuperTrunfo = isSuperTrunfo;
+      this.descricao = descricao;
+      atributos = new Atributo[4];
+  
+      for(int i = 0; i < 4; i++) {
+        atributos[i] = new Atributo<>(nomeUnidadeAtributos[i][0], valorAtributos[i], nomeUnidadeAtributos[i][1]);
+      }
     }
   
     public String getNome() {
-        return nome;
+      return nome;
     }
   
-    public String setNome(String nome) {
-        return this.nome;
+    public void setNome(String nome) {
+      this.nome = nome;
     }
-
+  
+    public Atributo<T>[] getAtributos() {
+      return atributos;
+    }
+  
+    public void setAtributos(Atributo<T>[] atributos) {
+      this.atributos = atributos;
+    }
+  
     public String getCodigo() {
-        return codigo;
+      return codigo;
     }
-
+  
     public void setCodigo(String codigo) {
-        this.codigo = codigo;
+      this.codigo = codigo;
     }
-
-    public Atributo[] getAtributos() {
-        return atributos;
+  
+    public boolean getIsSuperTrunfo() {
+      return isSuperTrunfo;
     }
-
-    public void setAtributos(Atributo[] atributos) {
-        this.atributos = atributos;
+  
+    public void setIsSuperTrunfo(boolean isSuperTrunfo) {
+      this.isSuperTrunfo = isSuperTrunfo;
+    }
+  
+    public String getDescricao() {
+      return descricao;
+    }
+  
+    public void setDescricao(String descricao) {
+      this.descricao = descricao;
+    }
+  
+    @Override
+    public String toString() {
+      return "Carta [atributos=[" + atributos[0].toString() + ", " + atributos[1].toString() + ", " + atributos[2].toString() + ", " + atributos[3].toString() + "], nome=" + nome + ", codigo=" + codigo
+          + ", isSuperTrunfo=" + isSuperTrunfo + ", descricao=" + descricao + "]";
     }
   }
