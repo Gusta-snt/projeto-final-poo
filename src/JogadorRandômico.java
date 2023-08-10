@@ -1,4 +1,4 @@
-import java.util.Random;
+/*import java.util.Random;
 
 public class JogadorRandômico extends JogadorAbstrato{
 
@@ -87,4 +87,45 @@ public class JogadorRandômico extends JogadorAbstrato{
         return tento.toString();
     }
     
+}*/
+
+import java.util.concurrent.ThreadLocalRandom;
+
+public class JogadorRandômico extends JogadorAbstrato {
+    public JogadorRandômico(String nick, Baralho monte) {
+        super(nick, monte);
+    }
+
+    @Override
+    public Atributo<?> escolherAtributo(Atributo<?>[] atributos) {
+       // if(atributos.length!=0){
+            int indiceAleatorio = ThreadLocalRandom.current().nextInt(atributos.length);
+            return atributos[indiceAleatorio];
+       /* }if(atributos.length==0){
+            System.out.println("Rapaz, cadê ??");
+        }*/
+    }
+
+    @Override
+    public void adicionarCarta(Carta carta) {
+        monte.adicionarCarta(carta);
+    }
+
+    @Override
+    public int getQuantidadeCartas() {
+        return monte.size();
+    }
+
+    @Override
+    public Carta getCartaSuperior() {
+        return monte.pegarDoTopo();
+    }
+
+    @Override
+    public boolean monteVazio() {
+        if(monte.size()==0){
+            return true;
+        }
+        return false;
+    }
 }

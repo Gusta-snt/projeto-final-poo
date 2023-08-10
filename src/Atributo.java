@@ -1,55 +1,28 @@
-public class Atributo extends Carta{
+public class Atributo<T extends Number> {
+    private String nome;
+    private T valor;
+    private String unidade;
 
-
-    protected int atribA;
-    protected int atribB;
-    protected int atribC;
-    protected int atribD;
-
-    public Atributo( int atribA, int atribB, int atribC, int atribD){
-        super(name,code, infoA, infoB, infoC, null);
-        this.atribA = atribA;
-        this.atribB = atribB;
-        this.atribC = atribC;
-        this.atribD = atribD;
+    public Atributo(String nome, T valor, String unidade) {
+        this.nome = nome;
+        this.valor = valor;
+        this.unidade = unidade;
     }
 
-
-    public int getAtribA() {
-        return atribA;
+    public String getNome() {
+        return nome;
     }
 
-    public void setAtribA(int atribA) {
-        this.atribA = atribA;
+    public T getValor() {
+        return valor;
     }
 
-    public int getAtribB() {
-        return atribB;
+    public String getUnidade() {
+        return unidade;
     }
-
-    public void setAtribB(int atribB) {
-        this.atribB = atribB;
-    }
-
-    public int getAtribC() {
-        return atribC;
-    }
-
-    public void setAtribC(int atribC) {
-        this.atribC = atribC;
-    }
-
-    public int getAtribD() {
-        return atribD;
-    }
-
-    public void setAtribD(int atribD) {
-        this.atribD = atribD;
-    }
-
 
     @Override
     public String toString() {
-        return "Atributo [atribA=" + atribA + ", atribB=" + atribB + ", atribC=" + atribC + ", atribD=" + atribD + "]";
+        return nome + ": " + valor + " " + unidade;
     }
 }

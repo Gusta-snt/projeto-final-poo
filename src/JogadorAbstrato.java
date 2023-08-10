@@ -1,4 +1,4 @@
-public abstract class JogadorAbstrato {
+/*public abstract class JogadorAbstrato {
     protected String nick;
     protected static Baralho baralho;
     public JogadorAbstrato(String nick) {
@@ -22,6 +22,7 @@ public abstract class JogadorAbstrato {
     public abstract String wichAtrib(Carta carta);
 
   
+<<<<<<< HEAD
   /*  public String jogada() {
         StringBuilder tento = new StringBuilder();
         for (Carta carta : baralho) {
@@ -29,6 +30,15 @@ public abstract class JogadorAbstrato {
         }
         return tento.toString();
     }*/
+=======
+  //  public String jogada() {
+   //     StringBuilder tento = new StringBuilder();
+     //   for (Carta carta : baralho) {
+       //     tento.append(carta.toString()).append("\n");
+        //}
+        //return tento.toString();
+    //}
+>>>>>>> da8c19f (testando primeiro protótipo integrado)
 
     public String getNick() {
         return nick;
@@ -50,4 +60,21 @@ public abstract class JogadorAbstrato {
 public String toString() {
     return "JogadorAbstrato [nick=" + nick + ", baralho=" + baralho + "]";
 }
+}
+*/
+
+public abstract class JogadorAbstrato {
+    protected String nick;
+    protected Baralho monte;
+
+    public JogadorAbstrato(String nick, Baralho monte) {
+        this.nick = nick;
+        this.monte = monte;
+    }
+
+    public abstract Atributo<?> escolherAtributo(Atributo<?>[] atributos);
+    public abstract void adicionarCarta(Carta carta);
+    public abstract int getQuantidadeCartas();
+    public abstract Carta getCartaSuperior();
+    public abstract boolean monteVazio();
 }

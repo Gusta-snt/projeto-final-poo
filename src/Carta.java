@@ -1,82 +1,67 @@
-//package supertrunfo;
+public class Carta<T extends Number>{
 
-public class Carta {
-    protected static String name;
-    protected static String code;
-    protected static String infoA;
-    public String getInfoA() {
-        return infoA;
+  private Atributo<T>[] atributos;
+  private String nome;
+  private String codigo;
+  private boolean isSuperTrunfo;
+  private String descricao;
+
+  public Carta(String[][] nomeUnidadeAtributos, T[] valorAtributos, String nome, String codigo, boolean isSuperTrunfo, String descricao) {
+    this.nome = nome;
+    this.codigo = codigo;
+    this.isSuperTrunfo = isSuperTrunfo;
+    this.descricao = descricao;
+    atributos = new Atributo[4];
+
+    for(int i = 0; i < 4; i++) {
+      atributos[i] = new Atributo<>(nomeUnidadeAtributos[i][0], valorAtributos[i], nomeUnidadeAtributos[i][1]);
     }
+  }
 
 
-    public void setInfoA(String infoA) {
-        Carta.infoA = infoA;
-    }
+public String getNome() {
+    return nome;
+  }
 
-    protected static String infoB;
-    public String getInfoB() {
-        return infoB;
-    }
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
+  public Atributo<T>[] getAtributos() {
+    return atributos;
+  }
 
-    public void setInfoB(String infoB) {
-        Carta.infoB = infoB;
-    }
+  public void setAtributos(Atributo<T>[] atributos) {
+    this.atributos = atributos;
+  }
 
-    protected static String infoC;
-    public Carta(String name, String code, String infoA, String infoB, String infoC, String[] elementos) {
-        Carta.name = name;
-        Carta.code = code;
-        Carta.infoA = infoA;
-        Carta.infoB = infoB;
-        Carta.infoC = infoC;
-    }
+  public String getCodigo() {
+    return codigo;
+  }
 
+  public void setCodigo(String codigo) {
+    this.codigo = codigo;
+  }
 
-    public String getInfoC() {
-        return infoC;
-    }
+  public boolean getIsSuperTrunfo() {
+    return isSuperTrunfo;
+  }
 
+  public void setIsSuperTrunfo(boolean isSuperTrunfo) {
+    this.isSuperTrunfo = isSuperTrunfo;
+  }
 
-    public void setInfoC(String infoC) {
-        Carta.infoC = infoC;
-    }
+  public String getDescricao() {
+    return descricao;
+  }
 
-    
+  public void setDescricao(String descricao) {
+    this.descricao = descricao;
+  }
 
-//================================================================================//
-
-
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        Carta.name = name;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        Carta.code = code;
-    }
-/*-------------------------------------------------------------------------------------//
-    @Override
-	public String toString() {
-		return "Imóvel [código=" + getCode() + ", proprietário=" + proprietário + ", tipo=" + tipo + ", tamanho=" + tamanho
-				+ ", valor=" + valor + ", situação=" + situação + ", reservadoPara=" + reservadoPara + "]";
-	}*/
-
-    @Override
-    public String toString() {
-        // TODO Auto-generated method stub
-        return super.toString();
-    }
-
-	public String[] getElementos() {
-		return null;
-	}
-   
-
+  @Override
+  public String toString() {
+    return "Carta [atributos=[" + atributos[0].toString() + ", " + atributos[1].toString() + ", " + atributos[2].toString() + ", " + atributos[3].toString() + "], nome=" + nome + ", codigo=" + codigo
+        + ", isSuperTrunfo=" + isSuperTrunfo + ", descricao=" + descricao + "]";
+  }
 }
