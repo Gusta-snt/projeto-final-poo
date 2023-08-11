@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Baralho extends LinkedList<Carta>{
+public class Baralho extends LinkedList<Carta> {
     private String tema;
 
     public String getTema() {
@@ -123,5 +123,9 @@ public class Baralho extends LinkedList<Carta>{
                 toggleJogador = jogador1;
             }
         }
+    }
+
+    public Carta pegarDoTopo() {
+        return null;
     }
 }

@@ -67,10 +67,7 @@ public class JogadorReal extends JogadorAbstrato {
         super(nick, monte);
     }
 
-    public JogadorReal(Baralho baralho) {
-    }
-
-    @Override
+    
     public Atributo<?> escolherAtributo(Atributo<?>[] atributos) {
         try (Scanner scanner = new Scanner(System.in)) {
             int escolha=0;
@@ -85,7 +82,7 @@ public class JogadorReal extends JogadorAbstrato {
         }
     }
 
-    @Override
+    
     public void adicionarCarta(Carta carta) {
         monte.adicionarCarta(carta);
     }
@@ -100,7 +97,6 @@ public class JogadorReal extends JogadorAbstrato {
         return monte.pegarDoTopo();
     }
 
-    @Override
     public boolean monteVazio() {
         if(monte.size()==0){
             return true;

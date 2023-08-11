@@ -30,7 +30,7 @@ public class Principal {
         System.out.println("Escolha um tema para o jogo: ");
         System.out.println("\tBen 10\n\tOne Piece\n\tBNHA\n\tDeuses");
         String tema = scanner.nextLine();
-        Jogo jogo = new Jogo(tema);
+        Jogo jogo = new Jogo(tema, tema);
         jogo.jogar();
         scanner.close();
 //>>>>>>> da8c19f (testando primeiro protótipo integrado)

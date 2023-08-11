@@ -72,10 +72,26 @@ public abstract class JogadorAbstrato {
         this.monte = monte;
     }
 
-    public abstract Atributo<?> escolherAtributo(Atributo<?>[] atributos);
     public abstract void adicionarCarta(Carta carta);
     public abstract int getQuantidadeCartas();
-    public abstract Carta getCartaSuperior();
     public abstract boolean monteVazio();
+    public abstract Atributo<?>  escolherAtributo(Atributo[] atributos);
+    public abstract Carta getCartaSuperior();
+
+    public String getNick() {
+        return nick;
+    }
+
+    public void setNick(String nick) {
+        this.nick = nick;
+    }
+
+    public Baralho getMonte() {
+        return monte;
+    }
+
+    public void setMonte(Baralho monte) {
+        this.monte = monte;
+    }
 
 }

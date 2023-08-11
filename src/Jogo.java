@@ -9,15 +9,16 @@ public class Jogo {
     //No construtor ele vai receber o tema do baralho e vai instaciar o baralho com o tema, toda a logica do tema está na classe baralho
     //Depois vai carregar o baralho e atribuir a cada jogador e com a metodo distribuir vai entregar a quantidade certa para cada jogador
 
-    public Jogo(String tema) {
+    public Jogo(String tema, String nick) {
         baralho = new Baralho(tema);
         baralho.carregar();
-
-        jogadorReal = new JogadorReal(baralho);
-        jogadorRandômico = new JogadorRandômico(baralho);
-
+    
+        jogadorReal = new JogadorReal(nick, baralho);
+        jogadorRandômico = new JogadorRandômico(nick, baralho);
+    
         baralho.distribuir(jogadorReal, jogadorRandômico);
     }
+    
 
     //Mostrar vencedor é mais para efeito visual, tem relação direta com a classe do jogador abstrato com a logica de monteVazio
     public void mostrarVencedor(){
@@ -74,22 +75,22 @@ public class Jogo {
         Carta cartaJogadorAtivo = jogadorAtivo.getCartaSuperior();
         Atributo atributoEscolhido = jogadorAtivo.escolherAtributo(cartaJogadorAtivo.getAtributos());
 
-        System.out.println("Jogador " + jogadorAtivo.getNome() + " escolheu o atributo: " + atributoEscolhido.getNome());
+        System.out.println("Jogador " + jogadorAtivo.getNick() + " escolheu o atributo: " + atributoEscolhido.getNome());
 
         Carta cartaJogadorPassivo = jogadorPassivo.getCartaSuperior();
 
-        System.out.println("A carta do Jogador " + jogadorPassivo.getNome() + " é: " + cartaJogadorPassivo);
+        System.out.println("A carta do Jogador " + jogadorPassivo.getNick() + " é: " + cartaJogadorPassivo);
 
         int resultado = cartaJogadorAtivo.compararAtributo(cartaJogadorPassivo, atributoEscolhido);
 
         if (resultado > 0) {
             jogadorAtivo.adicionarCarta(cartaJogadorPassivo);
             jogadorPassivo.getCartaSuperior();
-            System.out.println("Jogador " + jogadorAtivo.getNome() + " venceu a rodada!");
+            System.out.println("Jogador " + jogadorAtivo.getNick() + " venceu a rodada!");
         } else if (resultado < 0) {
             jogadorPassivo.adicionarCarta(cartaJogadorAtivo);;
             jogadorAtivo.getCartaSuperior();
-            System.out.println("Jogador " + jogadorPassivo.getNome() + " venceu a rodada!");
+            System.out.println("Jogador " + jogadorPassivo.getNick() + " venceu a rodada!");
         } else {
             System.out.println("Empate! Ninguém ganhou a rodada.");
         }

@@ -35,10 +35,8 @@ public class JogadorRandômico extends JogadorAbstrato{
         super.setNick(nick);
     }
 
-    @Override
-    public String wichAtrib(Carta carta) {
-        // TODO Auto-generated method stub
-        
+    
+    public String wichAtrib(Carta carta) {        
         random.nextInt(4);
         if(random.equals(1)){
             selected=("A");
@@ -96,17 +94,13 @@ public class JogadorRandômico extends JogadorAbstrato {
         super(nick, monte);
     }
 
-    @Override
+   
     public Atributo<?> escolherAtributo(Atributo<?>[] atributos) {
-       // if(atributos.length!=0){
-            int indiceAleatorio = ThreadLocalRandom.current().nextInt(atributos.length);
+            int indiceAleatorio = ThreadLocalRandom.current().nextInt(1,5);
             return atributos[indiceAleatorio];
-       /* }if(atributos.length==0){
-            System.out.println("Rapaz, cadê ??");
-        }*/
     }
 
-    @Override
+ 
     public void adicionarCarta(Carta carta) {
         monte.adicionarCarta(carta);
     }
@@ -121,11 +115,11 @@ public class JogadorRandômico extends JogadorAbstrato {
         return monte.pegarDoTopo();
     }
 
-    @Override
+   
     public boolean monteVazio() {
-        if(monte.size()==0){
-            return true;
-        }
-        return false;
+        return monte.isEmpty();
     }
+
+
+
 }

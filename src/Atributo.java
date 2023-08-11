@@ -1,4 +1,4 @@
-public class Atributo<T extends Number> {
+public class Atributo<T> {
     private String nome;
     private T valor;
     private String unidade;
