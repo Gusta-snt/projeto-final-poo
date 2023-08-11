@@ -18,49 +18,61 @@ public class Baralho extends LinkedList<Carta>{
         BufferedReader reader = null;
         String linha = "";
 
-        String[][] nomeAtributos = null;
-        String[] nomeCartas = null;
-        String[] codigo = null;
-        String[] descricao = null;
-        Boolean[] isSuperTrunfo = null;
-        String[][] valorAtributosTabela = null;
         try {
             reader = new BufferedReader(new FileReader(arquivo));
-            String[][] tabela = new String[34][9];
+
             int i = 0;
+
+            String[][] nomeAtributos = new String[4][2];
+
             while((linha = reader.readLine()) != null) {
-                String[] palavrasLinha = linha.split(";");
-                int j = 0;
-                //System.out.printf("%d ", i);
-                for(String palavra : palavrasLinha) {
-                    tabela[i][j] = palavra;
-                    //System.out.printf("%s ; ",palavra);
-                    j++;
+                if(linha != "") {
+                    String[] palavrasLinha = linha.split(";");
+                    int j = 0;
+
+                    String nomeCarta = null;
+                    String codigo = null;
+                    String descricao = null;
+                    boolean isSuperTrunfo = false;
+                    String[] valorAtributos = new String[4];
+
+                    for(String palavra : palavrasLinha) {
+                        if(i == 0 && j <= 4 && j >= 1) {
+                            nomeAtributos[j - 1] = palavra.split("-");
+                        }else{
+                            switch(j) {
+                                case 0:
+                                    nomeCarta = palavra;
+                                break;
+                                case 1:
+                                case 2:
+                                case 3:
+                                case 4:
+                                    valorAtributos[j - 1] = palavra;
+                                break;
+                                case 5:
+                                    codigo = palavra;
+                                break;
+                                case 6:
+                                    isSuperTrunfo = Boolean.parseBoolean(palavra);
+                                break;
+                                case 7:
+                                    descricao = palavra;
+                                break;
+                            }
+                        }
+                        j++;
+                    }
+                    if(i != 0) {
+                        Carta carta = new Carta(nomeAtributos, valorAtributos, nomeCarta, codigo, isSuperTrunfo, descricao);
+                        this.add(carta);
+                    }
+                    
+                    i++;
                 }
-                //System.out.println();
-                i++;
+                
             }
 
-            // Construindo alguns arrays com a tabela criada: 
-            nomeAtributos = new String[4][2];
-            for(i = 0; i < 4; i++) {
-                nomeAtributos[i] = tabela[0][i+1].split("-");
-                //System.out.println(nomeAtributos[i]);
-            }
-            nomeCartas = new String[32];
-            codigo = new String[32];
-            isSuperTrunfo = new Boolean[32];
-            descricao = new String[32];
-            valorAtributosTabela = new String[32][4];
-            for(i = 0; i < 32; i++) {
-                nomeCartas[i] = tabela[i+1][0];
-                codigo[i] = tabela[i+1][5];
-                isSuperTrunfo[i] = Boolean.parseBoolean(tabela[i+1][6]);
-                descricao[i] = tabela[i+1][7];
-                for(int j = 0; j < 4; j++) {
-                    valorAtributosTabela[i][j] = tabela[i+1][j+1];
-                }
-            }
         }catch(Exception e) {
             e.printStackTrace();
         }finally {
@@ -70,15 +82,6 @@ public class Baralho extends LinkedList<Carta>{
                 System.out.println("Não consigo fechar o leitor!");
             }
 
-        }
-
-        for(int i = 0; i < 32; i++) {
-            String[] valorAtributos = new String[4];
-            for(int j = 0; j < 4; j++) {
-                valorAtributos[j] = valorAtributosTabela[i][j];
-            }
-            Carta carta = new Carta(nomeAtributos, valorAtributos, nomeCartas[i], codigo[i], isSuperTrunfo[i], descricao[i]);
-            this.add(carta);
         }
     }
 
