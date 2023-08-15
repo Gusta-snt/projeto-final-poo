@@ -1,4 +1,3 @@
-
 public class Carta {
 
     private Atributo<? extends Number>[] atributos;

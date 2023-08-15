@@ -129,3 +129,4 @@ public class Baralho extends LinkedList<Carta> {
         return null;
     }
 }
+ 

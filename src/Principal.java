@@ -1,25 +1,3 @@
-/*<<<<<<< HEAD
-
-
-public class Principal{
-    public Principal() {
-
-
-    }
-    private Object iniciarJogo() {
-        return null;
-    }
-    public static void main(String[] args) {
-        
-
-        Jogo jogo = new Jogo();
-        jogo.jogar();
-
-    }
-    @Override
-    public String toString() {
-        return "Principal []";
-=======*/
 import java.util.Scanner;
 
 public class Principal {
@@ -30,10 +8,11 @@ public class Principal {
         System.out.println("Escolha um tema para o jogo: ");
         System.out.println("\tBen 10\n\tOne Piece\n\tBNHA\n\tDeuses");
         String tema = scanner.nextLine();
-        Jogo jogo = new Jogo(tema, tema);
+        System.out.println("Digite seu nome: ");
+        String nick = scanner.nextLine();
+        Jogo jogo = new Jogo(tema, nick);
         jogo.jogar();
         scanner.close();
-//>>>>>>> da8c19f (testando primeiro protótipo integrado)
     }
 }
  

@@ -20,6 +20,10 @@ public class Jogo {
     }
     
 
+    public Jogo(String tema) {
+    }
+
+
     //Mostrar vencedor é mais para efeito visual, tem relação direta com a classe do jogador abstrato com a logica de monteVazio
     public void mostrarVencedor(){
         
