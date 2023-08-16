@@ -6,8 +6,8 @@ public class JogadorRandômico extends JogadorAbstrato {
         super(nick, monte);
     }
 
-   
-    public Atributo<?> escolherAtributo(Atributo[] atributos) {
+    
+    public Atributo<?> escolherAtributo(Atributo<?>[] atributos) {
             int indiceAleatorio = ThreadLocalRandom.current().nextInt(0,4);
             return atributos[indiceAleatorio];
     }
@@ -24,10 +24,11 @@ public class JogadorRandômico extends JogadorAbstrato {
 
     @Override
     public Carta getCartaSuperior() {
-        return monte.pegarDoTopo();
+        return monte.peek();
     }
 
    
+    @Override
     public boolean monteVazio() {
         return monte.isEmpty();
     }

@@ -11,7 +11,7 @@ public abstract class JogadorAbstrato {
     public abstract void adicionarCarta(Carta carta);
     public abstract int getQuantidadeCartas();
     public abstract boolean monteVazio();
-    public abstract Atributo<?>  escolherAtributo(Atributo[] atributos);
+    public abstract Atributo<?>  escolherAtributo(Atributo<?>[] atributos);
     public abstract Carta getCartaSuperior();
 
     public String getNick() {

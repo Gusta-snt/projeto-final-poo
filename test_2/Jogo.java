@@ -20,10 +20,6 @@ public class Jogo {
     }
     
 
-    public Jogo(String tema) {
-    }
-
-
     //Mostrar vencedor é mais para efeito visual, tem relação direta com a classe do jogador abstrato com a logica de monteVazio
     public void mostrarVencedor(){
         
@@ -37,10 +33,10 @@ public class Jogo {
             System.out.println(".   .   .    .A maquina venceu! Mais sorte na proxima !!!.   .   .    .");
             System.out.println("******____________**********___________******________\033[0m");
         }else{
-            System.out.println("\033[33mDeu Empate, tente novamente.\033[0m]");
+            System.out.println("\033[33mDeu Empate, tente novamente.\033[0m");
         }
-    }
 
+    }
     //status é para ver o andamento do jogo 
     public void mostrarStatus(){
         System.out.println("=========Mostrar status=============");
@@ -76,28 +72,34 @@ public class Jogo {
     }
 
     private void jogada(JogadorAbstrato jogadorAtivo, JogadorAbstrato jogadorPassivo) {
-        Carta cartaJogadorAtivo = jogadorAtivo.getCartaSuperior();
-        Atributo atributoEscolhido = jogadorAtivo.escolherAtributo(cartaJogadorAtivo.getAtributos());
 
+    	Carta cartaJogadorAtivo = jogadorAtivo.getCartaSuperior();
+        if (cartaJogadorAtivo != null) {
+        Atributo<?> atributoEscolhido = jogadorAtivo.escolherAtributo(cartaJogadorAtivo.getAtributos());
         System.out.println("Jogador " + jogadorAtivo.getNick() + " escolheu o atributo: " + atributoEscolhido.getNome());
-
+        
         Carta cartaJogadorPassivo = jogadorPassivo.getCartaSuperior();
 
-        System.out.println("A carta do Jogador " + jogadorPassivo.getNick() + " é: " + cartaJogadorPassivo);
+        System.out.println("A carta do Jogador " + jogadorPassivo.getNick() + " é: " + (cartaJogadorPassivo != null ? cartaJogadorPassivo : "Nenhuma carta disponível"));
 
         int resultado = cartaJogadorAtivo.compararAtributo(cartaJogadorPassivo, atributoEscolhido);
 
         if (resultado > 0) {
             jogadorAtivo.adicionarCarta(cartaJogadorPassivo);
-            jogadorPassivo.getCartaSuperior();
+            jogadorPassivo.adicionarCarta(cartaJogadorPassivo); // Adiciona a carta do jogador passivo ao jogador ativo
+            jogadorPassivo.getMonte().removerCartaSuperior(cartaJogadorPassivo); // Remove a carta do jogador passivo do monte
             System.out.println("Jogador " + jogadorAtivo.getNick() + " venceu a rodada!");
         } else if (resultado < 0) {
-            jogadorPassivo.adicionarCarta(cartaJogadorAtivo);;
-            jogadorAtivo.getCartaSuperior();
+            jogadorPassivo.adicionarCarta(cartaJogadorAtivo);
+            jogadorAtivo.adicionarCarta(cartaJogadorAtivo); // Adiciona a carta do jogador ativo ao jogador passivo
+            jogadorAtivo.getMonte().removerCartaSuperior(cartaJogadorAtivo); // Remove a carta do jogador ativo do monte
             System.out.println("Jogador " + jogadorPassivo.getNick() + " venceu a rodada!");
         } else {
             System.out.println("Empate! Ninguém ganhou a rodada.");
         }
+    }else {
+        throw new IllegalArgumentException("Jogada inválida: você não tem uma carta ativa.");
+    }
     }
 }
     

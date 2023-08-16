@@ -5,7 +5,7 @@ public class JogadorReal extends JogadorAbstrato {
         super(nick, monte);
     }
 
-    public Atributo<?> escolherAtributo(Atributo[] atributos) {
+    public Atributo<?> escolherAtributo(Atributo<?>[] atributos) {
         try (Scanner scanner = new Scanner(System.in)) {
             int escolha;
             do {
@@ -22,25 +22,22 @@ public class JogadorReal extends JogadorAbstrato {
 
     @Override
     public void adicionarCarta(Carta carta) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'adicionarCarta'");
+        monte.adicionarCarta(carta);
     }
 
     @Override
     public int getQuantidadeCartas() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getQuantidadeCartas'");
+        return monte.size();
     }
 
     @Override
     public boolean monteVazio() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'monteVazio'");
+        return monte.isEmpty();
     }
 
     @Override
     public Carta getCartaSuperior() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getCartaSuperior'");
+        return monte.peek();
     }
+
 }

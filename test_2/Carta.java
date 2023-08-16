@@ -6,24 +6,36 @@ public class Carta {
     private boolean isSuperTrunfo;
     private String descricao;
     
-    public Carta(String[][] nomeUnidadeAtributos, String[] valorAtributos, String nome, String codigo, boolean isSuperTrunfo, String descricao) {
-        this.nome = nome;
-        this.codigo = codigo;
-        this.isSuperTrunfo = isSuperTrunfo;
-        this.descricao = descricao;
-        atributos = new Atributo[4];
-    
-        for (int i = 0; i < 4; i++) {
-            // Converter valorAtributos para tipos numéricos (por exemplo, Integer)
-            Number valorNumerico = Double.parseDouble(valorAtributos[i]);
-            atributos[i] = new Atributo<>(nomeUnidadeAtributos[i][0], valorNumerico, nomeUnidadeAtributos[i][1]);
+@SuppressWarnings("unchecked")
+public Carta(String[][] nomeUnidadeAtributos, String[] valorAtributos, String nome, String codigo, boolean isSuperTrunfo, String descricao) {
+    this.nome = nome;
+    this.codigo = codigo;
+    this.isSuperTrunfo = isSuperTrunfo;
+    this.descricao = descricao;
+    atributos = new Atributo[4];
+
+    for (int i = 0; i < 4; i++) {
+    	if (nomeUnidadeAtributos.length > i && nomeUnidadeAtributos[i].length > 1) {
+    	    Number valorNumerico = 0;
+			atributos[i] = new Atributo<>(nomeUnidadeAtributos[i][0], valorNumerico, nomeUnidadeAtributos[i][1]);
+    	} else {
+    		break;
+    	}
+        String valorString = valorAtributos[i];
+        Number valorNumerico;
+        if (!valorString.isEmpty()) {
+            valorNumerico = Double.parseDouble(valorString);
+        } else {
+            valorNumerico = 0; 
         }
+        atributos[i] = new Atributo<>(nomeUnidadeAtributos[i][0], valorNumerico, nomeUnidadeAtributos[i][1]);
     }
+
+}
+
+    
     
 
-    public Carta(String[][] nomeAtributos, String[] valorAtributos, String string, String string2, Boolean boolean1,
-            String string3) {
-    }
 
     public String getNome() {
         return nome;
@@ -71,7 +83,7 @@ public class Carta {
                 + ", isSuperTrunfo=" + isSuperTrunfo + ", descricao=" + descricao + "]";
     }
 
-    public int compararAtributo(Carta cartaJogadorPassivo, Atributo atributoEscolhido) {
+    public int compararAtributo(Carta cartaJogadorPassivo, Atributo<?> atributoEscolhido) {
         return 0;
     }
 }
