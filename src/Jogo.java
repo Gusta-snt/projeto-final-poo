@@ -93,18 +93,64 @@ public class Jogo {
             }
         }
 
-        //int resultado = cartaJogadorAtivo.compararAtributo(cartaJogadorPassivo, atributoEscolhido);
+        boolean c1IsSuperTrunfo = verificaSuperTrunfo(
+            cartaJogadorAtivo,
+            cartaJogadorPassivo,
+            atributoEscolhido.getValor(),
+            atributoPassivo.getValor(),
+            jogadorAtivo,
+            jogadorPassivo
+        );
+        
+        boolean c2IsSuperTrunfo = verificaSuperTrunfo(
+            cartaJogadorPassivo,
+            cartaJogadorAtivo,
+            atributoEscolhido.getValor(),
+            atributoPassivo.getValor(),
+            jogadorPassivo,
+            jogadorAtivo
+        );
 
-        if (atributoEscolhido.getValor() > atributoPassivo.getValor()) {
-            Carta carta = jogadorPassivo.getMonte().getCartaTopo();
-            jogadorAtivo.getMonte().adicionarCarta(carta);
+        if(!c1IsSuperTrunfo && !c2IsSuperTrunfo) {
+            comparaAtributos(atributoEscolhido.getValor(), atributoPassivo.getValor(), jogadorPassivo, jogadorAtivo);
+        }
+    }
+
+    public void comparaAtributos(double atributoPassivo, double atributoAtivo, JogadorAbstrato jogadorPassivo, JogadorAbstrato jogadorAtivo) {
+        if (atributoAtivo > atributoPassivo) {
+
+            jogadorAtivo.getMonte().adicionarCarta(jogadorPassivo.getMonte().getCartaTopo());
             System.out.println("Jogador " + jogadorAtivo.getNome() + " venceu a rodada!");
-        } else if (atributoEscolhido.getValor() < atributoPassivo.getValor()) {
+
+        } else if (atributoAtivo < atributoPassivo) {
+
             jogadorPassivo.getMonte().adicionarCarta(jogadorAtivo.getMonte().getCartaTopo());
             System.out.println("Jogador " + jogadorPassivo.getNome() + " venceu a rodada!");
+
         } else {
             System.out.println("Empate! Ninguém ganhou a rodada.");
         }
-        
+    }
+
+    public boolean verificaSuperTrunfo(
+        Carta cartaJogadorAtivo,
+        Carta cartaJogadorPassivo,
+        double atributoAtivo,
+        double atributoPassivo,
+        JogadorAbstrato jogadorAtivo,
+        JogadorAbstrato jogadorPassivo
+    ) {
+        if (cartaJogadorAtivo.getIsSuperTrunfo()) {
+            if (cartaJogadorPassivo.getCodigo().contains("A")) {
+                comparaAtributos(atributoAtivo, atributoPassivo, jogadorPassivo, jogadorAtivo);
+            }else{
+                Carta carta = jogadorPassivo.getMonte().getCartaTopo();
+                jogadorAtivo.getMonte().adicionarCarta(carta);
+                System.out.println("SUPER TRUNFO!");
+                System.out.println("Jogador " + jogadorAtivo.getNome() + " venceu a rodada!");
+            }
+            return true;
+        }
+        return false;
     }
 }
