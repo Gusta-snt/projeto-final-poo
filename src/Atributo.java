@@ -46,7 +46,7 @@ public class Atributo<N extends Number> {
 
     @Override
     public String toString() {
-        return "Atributo [nome=" + nome + ", valor=" + valor + " " + unidade + "]";
+        return nome + ": " + valor + " " + unidade + ")";
     }
 
     

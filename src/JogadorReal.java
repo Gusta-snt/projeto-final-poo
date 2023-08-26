@@ -9,11 +9,17 @@ public class JogadorReal extends JogadorAbstrato{
 
     @Override
     public Atributo<Number> escolherAtributo(Carta carta) {
+        int index;
         System.out.println(carta);
-        System.out.println("Escolha um atributo: ");
-        int index = scanner.nextInt();
+        System.out.println("Escolha um atributo (de 1 até 4): ");
+        index = scanner.nextInt();
         scanner.nextLine();
-        return carta.getAtributos()[index];
+        while(index < 1 || index > 4) {
+            System.out.println("Por favor, insira um número de 1 até 4: ");
+            index = scanner.nextInt();
+            scanner.nextLine();
+        }
+        return carta.getAtributos()[index - 1];
     }
 
     

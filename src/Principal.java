@@ -5,23 +5,21 @@ public class Principal {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("============== Super Trunfo ==============");
+        System.out.println("Qual é o seu nome? ");
+        String nomeJogador = scanner.nextLine();
         System.out.println("Escolha um tema para o jogo: ");
         System.out.println("\tBen 10\n\tOne Piece\n\tBNHA\n\tDeuses");
         String tema = scanner.nextLine();
-        System.out.println(tema);
-        Jogo jogo = new Jogo(tema);
+        tema = tema.replaceAll("\\s+", "").toLowerCase();
+
+        while(!tema.equals("ben10") && !tema.equals("onepiece") && !tema.equals("bnha") && !tema.equals("deuses")) {
+            System.out.println("Por favor, insira um tema válido dentre os listados: ");
+            tema = scanner.nextLine();
+            tema = tema.replaceAll("\\s+", "").toLowerCase();
+        }
+
+        Jogo jogo = new Jogo(tema, nomeJogador);
         jogo.jogar();
         scanner.close();
-
-        // Baralho baralho = new Baralho("deuses");
-
-        // baralho.carregar();
-        // baralho.embaralhar();
-        // System.out.println("------------------------");
-        // baralho.mostraCartas();
-        // System.out.println("REMOVENDO ------------------------");
-        // System.out.println(baralho.getCartaTopo());
-        // System.out.println("------------------------");
-        // baralho.mostraCartas();
     }
 }

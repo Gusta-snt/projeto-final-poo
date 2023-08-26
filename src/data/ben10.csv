@@ -1,33 +1,33 @@
 Nome do Personagem;Força-N;Agilidade-m/s;Inteligência-QI;Defesa-OHM;Código;super-trunfo;Descrição
-Chama;80;60;40;70;1A;false;Um alien flamejante capaz de lançar rajadas de fogo poderosas.
-Besta;90;50;30;80;1B;false;Uma criatura feroz com força sobre-humana e a capacidade de se transformar em animais.
-Quatro Braços;95;40;20;90;1C;false;Um alien colossal com quatro braços musculosos e uma incrível resistência.
-Diamante;70;80;50;60;1D;false;Um alien feito de cristal indestrutível, pode se regenerar e criar lâminas afiadas.
-Massa Cinzenta;20;90;100;30;2A;false;O ser mais inteligente do universo, com uma mente brilhante capaz de resolver qualquer problema.
-Ultra T;85;70;40;75;2B;false;Um alien com habilidades telepáticas que pode controlar mentes e levitar objetos.
-XLR8;60;95;30;50;2C;false;O veloz alien XLR8 possui a capacidade de correr em velocidades extremas, sendo praticamente imbatível em uma corrida.
-Insectóide;75;85;25;65;2D;false;Um alien inseto com exoesqueleto resistente e a habilidade de voar e soltar ácido.
-Cipó Selvagem;80;50;35;75;3A;false;Um alien planta com vinhas poderosas que permitem agarrar e controlar objetos.
-Enxurrada;70;40;45;80;3B;false;Um alien com controle sobre a água, podendo criar e manipular líquidos à vontade.
-Bala de Canhão;100;30;20;90;3C;false;Um alien com pele resistente e a habilidade de se transformar em uma esfera indestrutível.
-Acelerado;65;100;30;50;3D;false;Um alien que pode manipular o tempo, acelerando ou desacelerando eventos.
-Fantasmático;40;90;80;40;4A;false;Um alien fantasma capaz de se tornar intangível e invisível.
-Cromático;90;80;65;55;4B;false;Um alien com escamas refletoras que podem criar poderosos feixes de energia.
-Macaco-Aranha;85;70;40;70;4C;false;Um alien com agilidade e habilidades de aranha, além de um rabo adesivo.
-Armatu;100;50;30;80;4D;false;Um alien com armadura invulnerável e a capacidade de criar escudos de energia.
-Tartagira;70;30;60;85;5A;false;Um alien com casco blindado e a habilidade de lançar poderosas ondas sonoras.
-Fogo Fátuo;75;65;50;75;5B;false;Um alien feito de gás inflamável, podendo controlar e manipular o fogo.
-Friagem;80;40;70;70;5C;false;Um alien com a capacidade de congelar qualquer coisa e criar armas de gelo.
-Enormossauro;110;30;25;95;5D;false;Um alien gigante e extremamente forte, capaz de causar tremores e destruição.
-Estrela Polar;70;60;40;65;6A;false;Um alien com a habilidade de controlar campos magnéticos e a polaridade.
-Arraia-à-Jato;80;90;30;60;6B;false;Um alien aquático com a capacidade de voar em alta velocidade.
-Gigante;100;20;15;100;6C;false;Um alien colossal e lento, mas com uma força avassaladora.
-NRG;95;50;60;70;6D;false;Um alien radioativo com poderosas rajadas de energia.
-Ameaça Aquática;90;65;40;75;7A;false;Um alien anfíbio com habilidades aquáticas, além de ser forte e ágil.
-Gosma;50;70;75;60;7B;false;Um alien viscoso capaz de se transformar em diferentes formas e criar ácido corrosivo.
-Bloxx;80;50;55;80;7C;false;Um alien feito de blocos de construção, com a habilidade de se reconfigurar em várias estruturas defensivas e ofensivas.
-Buzzshock;60;85;55;75;7D;false;Um alien elétrico com a capacidade de gerar e controlar descargas elétricas.
-Alien X;9999;9999;9999;9999;8A;true;Um ser onipotente com controle total sobre a realidade, podendo alterar tudo a seu bel-prazer.
-Eco Eco;70;75;50;65;8B;false;Um alien sônico com a habilidade de criar cópias de si mesmo e lançar ondas de som destrutivas.
-Compressor;85;55;60;70;8C;false;Um alien com habilidades de super-força e a capacidade de criar ondas de choque poderosas.
-Mega Olhos;55;80;85;50;8D;false;Um alien com enormes olhos multifuncionais que permitem visão ampliada e raios de energia.
+Chama;80.876;60.234;40.987;70.543;1A;false;Um alien flamejante capaz de lançar rajadas de fogo poderosas.
+Besta;90.456;50.123;30.567;80.987;1B;false;Uma criatura feroz com força sobre-humana e a capacidade de se transformar em animais.
+Quatro Braços;95.765;40.456;20.876;90.345;1C;false;Um alien colossal com quatro braços musculosos e uma incrível resistência.
+Diamante;70.345;80.567;50.789;60.234;1D;false;Um alien feito de cristal indestrutível, pode se regenerar e criar lâminas afiadas.
+Massa Cinzenta;20.987;90.543;100.234;30.876;2A;false;O ser mais inteligente do universo, com uma mente brilhante capaz de resolver qualquer problema.
+Ultra T;85.345;70.456;40.765;75.987;2B;false;Um alien com habilidades telepáticas que pode controlar mentes e levitar objetos.
+XLR8;60.234;95.987;30.234;50.543;2C;false;O veloz alien XLR8 possui a capacidade de correr em velocidades extremas, sendo praticamente imbatível em uma corrida.
+Insectóide;75.765;85.345;25.876;65.456;2D;false;Um alien inseto com exoesqueleto resistente e a habilidade de voar e soltar ácido.
+Cipó Selvagem;80.345;50.234;35.876;75.345;3A;false;Um alien planta com vinhas poderosas que permitem agarrar e controlar objetos.
+Enxurrada;70.987;40.765;45.987;80.234;3B;false;Um alien com controle sobre a água, podendo criar e manipular líquidos à vontade.
+Bala de Canhão;100.345;30.987;20.765;90.345;3C;false;Um alien com pele resistente e a habilidade de se transformar em uma esfera indestrutível.
+Acelerado;65.987;100.876;30.765;50.234;3D;false;Um alien que pode manipular o tempo, acelerando ou desacelerando eventos.
+Fantasmático;40.876;90.234;80.345;40.987;4A;false;Um alien fantasma capaz de se tornar intangível e invisível.
+Cromático;90.567;80.876;65.234;55.765;4B;false;Um alien com escamas refletoras que podem criar poderosos feixes de energia.
+Macaco-Aranha;85.234;70.456;40.567;70.987;4C;false;Um alien com agilidade e habilidades de aranha, além de um rabo adesivo.
+Armatu;100.456;50.987;30.234;80.987;4D;false;Um alien com armadura invulnerável e a capacidade de criar escudos de energia.
+Tartagira;70.543;30.765;60.456;85.345;5A;false;Um alien com casco blindado e a habilidade de lançar poderosas ondas sonoras.
+Fogo Fátuo;75.234;65.765;50.987;75.234;5B;false;Um alien feito de gás inflamável, podendo controlar e manipular o fogo.
+Friagem;80.765;40.876;70.345;70.234;5C;false;Um alien com a capacidade de congelar qualquer coisa e criar armas de gelo.
+Enormossauro;110.345;30.987;25.765;95.987;5D;false;Um alien gigante e extremamente forte, capaz de causar tremores e destruição.
+Estrela Polar;70.456;60.234;40.987;65.567;6A;false;Um alien com a habilidade de controlar campos magnéticos e a polaridade.
+Arraia-à-Jato;80.987;90.543;30.234;60.876;6B;false;Um alien aquático com a capacidade de voar em alta velocidade.
+Gigante;100.543;20.987;15.456;100.345;6C;false;Um alien colossal e lento, mas com uma força avassaladora.
+NRG;95.456;50.234;60.765;70.234;6D;false;Um alien radioativo com poderosas rajadas de energia.
+Ameaça Aquática;90.567;65.765;40.987;75.234;7A;false;Um alien anfíbio com habilidades aquáticas, além de ser forte e ágil.
+Gosma;50.234;70.456;75.567;60.876;7B;false;Um alien viscoso capaz de se transformar em diferentes formas e criar ácido corrosivo.
+Bloxx;80.765;50.345;55.234;80.987;7C;false;Um alien feito de blocos de construção, com a habilidade de se reconfigurar em várias estruturas defensivas e ofensivas.
+Buzzshock;60.543;85.876;55.765;75.234;7D;false;Um alien elétrico com a capacidade de gerar e controlar descargas elétricas.
+Alien X;9999.765;9999.345;9999.234;9999.456;8A;true;Um ser onipotente com controle total sobre a realidade, podendo alterar tudo a seu bel-prazer.
+Eco Eco;70.876;75.456;50.987;65.234;8B;false;Um alien sônico com a habilidade de criar cópias de si mesmo e lançar ondas de som destrutivas.
+Compressor;85.234;55.987;60.876;70.345;8C;false;Um alien com habilidades de super-força e a capacidade e criar ondas de choque poderosas.
+Mega Olhos;55.876;80.234;85.987;50.567;8D;false;Um alien com enormes olhos multifuncionais que permitem visão ampliada e raios de energia.

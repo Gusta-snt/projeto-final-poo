@@ -14,7 +14,7 @@ public class Baralho extends LinkedList<Carta>{
     }
 
     public void carregar() {
-        String arquivo = "./data/" + this.tema.replaceAll("\\s+", "").toLowerCase() + ".csv";
+        String arquivo = "./data/" + this.tema + ".csv";
         BufferedReader reader = null;
         String linha = "";
 

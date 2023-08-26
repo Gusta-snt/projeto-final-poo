@@ -9,13 +9,13 @@ public class Jogo {
     //No construtor ele vai receber o tema do baralho e vai instaciar o baralho com o tema, toda a logica do tema está na classe baralho
     //Depois vai carregar o baralho e atribuir a cada jogador e com a metodo distribuir vai entregar a quantidade certa para cada jogador
 
-    public Jogo(String tema) {
+    public Jogo(String tema, String nomeJogador) {
         baralho = new Baralho(tema);
         baralho.carregar();
         baralho.embaralhar();
 
-        jogadorReal = new JogadorReal("Jotapê",baralho.getTema());
-        jogadorRandômico = new JogadorRandômico("Gusta",baralho.getTema());
+        jogadorReal = new JogadorReal(nomeJogador, baralho.getTema());
+        jogadorRandômico = new JogadorRandômico("CPU" , baralho.getTema());
 
         baralho.distribuir(jogadorReal, jogadorRandômico);
     }
@@ -57,7 +57,7 @@ public class Jogo {
                 jogada(jogadorRandômico, jogadorReal);
                 jogadorDaVez = jogadorReal;
             }else{
-                System.out.println("\n______Turno do Jogador Real______");
+                System.out.println("\n______Turno do Jogador " + jogadorReal.getNome() + "______");
                 jogada(jogadorReal, jogadorRandômico);
                 jogadorDaVez = jogadorRandômico;
             }

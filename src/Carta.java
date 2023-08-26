@@ -71,7 +71,7 @@ public class Carta{
   
     @Override
     public String toString() {
-      return "Carta: " + nome + "\nAtributos:\n" + atributos[0].toString() + ",\n" + atributos[1].toString() + ",\n" + atributos[2].toString() + ",\n" + atributos[3].toString() + "\n ------ Código" + codigo
-          + "\n isSuperTrunfo=" + isSuperTrunfo + "\n descricao=" + descricao + "]";
+      return "Carta: " + nome + "\nAtributos:\n (1 " + atributos[0].toString() + ",\n (2 " + atributos[1].toString() + ",\n (3 " + atributos[2].toString() + ",\n (4 " + atributos[3].toString() + "\nCódigo: " + codigo
+          + "\nÉ um super trunfo: " + isSuperTrunfo + "\nDescrição: " + descricao;
     }
   }
