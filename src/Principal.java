@@ -1,3 +1,12 @@
+/*
+ * Integrantes:
+ *  - Gustavo Ferreira dos Santos
+ *  - Elizeu Andrade de Jesus
+ *  - Higor Ferreira Silva
+ *  - Rhadyja Almeida Barbosa
+ *  - Thiago Honorato Ferreira
+ * */
+
 import java.util.Scanner;
 
 public class Principal {
