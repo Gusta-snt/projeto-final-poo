@@ -37,5 +37,7 @@ $ java Principal
 - [Gusta](https://github.com/Gusta-snt/)
 - [Thiago](https://github.com/ThiagoHF31)
 - [Higor](https://github.com/higorfs295)
+- [Rhadyja](https://github.com/rhadyjaalmeida)
+- [Elizeu](https://github.com/nardisz)
 
 
